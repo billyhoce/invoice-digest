@@ -1,17 +1,37 @@
-from docling.document_converter import DocumentConverter
 from langchain.chat_models import init_chat_model
 from typing import Dict, Any
 from src.constants import EXTRACTION_TEMPLATE
 from openai import RateLimitError
-import json
+from docling.datamodel.base_models import InputFormat
+from docling.document_converter import DocumentConverter, PdfFormatOption
+from docling.pipeline.vlm_pipeline import VlmPipeline
+from docling.datamodel.pipeline_options import (
+    VlmPipelineOptions,
+)
+from docling.datamodel import vlm_model_specs
 
 
 class digester:
     def __init__(self, json_schema: Dict[str, Any], model: str = "gpt-4.1"):
         self.schema = json_schema
-        self.parser = DocumentConverter()
+        self.init_converter()
         self.llm = init_chat_model(model)
         self.llm_structured_output = self.llm.with_structured_output(schema=json_schema)
+
+    def init_converter(self):
+        pipeline_options = VlmPipelineOptions(
+            vlm_options=vlm_model_specs.SMOLDOCLING_MLX,  # <-- Choose the appropriate docling VLM model
+        )
+
+        self.converter = DocumentConverter(
+            format_options={
+                InputFormat.PDF: PdfFormatOption(
+                    pipeline_cls=VlmPipeline,
+                    pipeline_options=pipeline_options,
+                ),
+            }
+        )
+
 
     def digest(self, document: str):
         """

@@ -1,0 +1,33 @@
+<!-- image -->
+
+BILL TO
+
+Your Client sydney NSW NSW 2009
+
+Australia
+
+issue date’ 19/7/2022
+
+Due date:
+
+Reference’
+
+|                           | invoice No. | Issue date | Dwe date   | Total due (AUD) $2,510.00   |                   |
+|---------------------------|---------------------------------------|-----------------------------|-------------------|
+|                           | Description Quantity                  | Unit price ($) Amount ($)   |                   |
+| Services & products       |                                       |                             |                   |
+| Viore services & products |                                       |                             | 2,000.00 2,000.00 |
+| Subtotal:                 |                                       |                             | $2,100.00         |
+| GST 10% from $100.00      |                                       |                             | £10.00            |
+| GST 20% from $2,000.00    |                                       |                             | $400.00           |
+| Total (AUD):              |                                       |                             | $2,510.00         |
+
+issued by, signature:
+
+<!-- image -->
+
+<!-- image -->
+
+## invoice 7077
+
+Tax invoice

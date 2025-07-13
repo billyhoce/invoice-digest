@@ -1,0 +1,60 @@
+<!-- image -->
+
+BILL TO
+
+Your Client
+
+100 Harris St
+
+Sydney NSW NSW 2009 Australia
+
+Invoice No.
+
+Issue date
+
+Due date
+
+19/7/2022
+
+3/8/2022
+
+$2,510.00
+
+| Description              | Quantity   | Unit price ($)   | Amount ($)   |
+|--------------------------|------------|------------------|--------------|
+| Services & products      | 1          | 100.00           | 100.00       |
+| More services & products | 1          | 2,000.00         | 2,000.00     |
+| Subtotal:                |            |                  | $2,100.00    |
+| GST 10% from $100.00     |            |                  | $10.00       |
+| GST 20% from $2,000.00   |            |                  | $400.00      |
+| Total (AUD):             |            |                  | $2,510.00    |
+
+<!-- image -->
+
++61200000000
+
+www.yourbusinessname.com.au
+
+email@yourbusinessname.com.au
+
+Your Business Name
+
+5 Martin PI
+
+Sydney NSW 2000
+
+Australia
+
+## Invoice 2022435
+
+Tax invoice
+
+19/7/2022
+
+3/8/2022
+
+2022435
+
+Total due (AUD)
+
+$2,510.00
