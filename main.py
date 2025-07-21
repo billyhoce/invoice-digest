@@ -1,27 +1,9 @@
 from src.digester import digester
+from src.constants import EXTRACTION_SCHEMA
 
 if __name__ == "__main__":
     # Example usage of the digester class
-    json_schema = {
-    "title": "invoice",
-    "description": "extracted invoice data",
-    "type": "object",
-    "properties": {
-        "invoice_number": {
-            "type": "string",
-            "description": "The unique identifier for the invoice",
-        },
-        "date": {
-            "type": "string",
-            "description": "The date of the invoice",
-        },
-        "total_amount": {
-            "type": "integer",
-            "description": "The total amount of the invoice"
-        },
-    },
-    "required": ["invoice_number", "total_amount"],
-}
+    json_schema = EXTRACTION_SCHEMA
     
     document_path = "sample_invoice_1.png"
     

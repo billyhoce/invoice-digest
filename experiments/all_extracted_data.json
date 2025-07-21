@@ -1,0 +1,91 @@
+{
+  "sample_invoice_1.png": {
+    "issuing_company_name": "Your Business Name",
+    "issuing_company_address": "5 Martin Pl\nSydney NSW 2000\nAustralia",
+    "issuing_company_phone": "+61200000000",
+    "issuing_company_website": "www.yourbusinessname.com.au",
+    "issuing_company_email": "email@yourbusinessname.com.au",
+    "invoice_number": "2022435",
+    "issue_date": "19/7/2022",
+    "due_date": "3/8/2022",
+    "reference_number": "2022435",
+    "currency": "AUD",
+    "line_items": [
+      {
+        "item_name": "Services & products",
+        "description": "Services & products",
+        "quantity": 1,
+        "unit_price": 100.0,
+        "amount": 100.0
+      },
+      {
+        "item_name": "More services & products",
+        "description": "More services & products",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "gst_information": {
+      "gst_description": "GST 10% from $100.00\nGST 20% from $2,000.00",
+      "amount": 410.0
+    },
+    "total_amount_due": 2510.0,
+    "_metadata": {
+      "file_path": "sample_invoice_1.png",
+      "file_type": "image",
+      "model_used": "gpt-4o",
+      "completion_tokens": 214,
+      "prompt_tokens": 1607,
+      "total_tokens": 1821
+    }
+  },
+  "sample_invoice_pdf.pdf": {
+    "issuing_company_name": "CPB Software (Germany) GmbH",
+    "issuing_company_address": "Im Bruch 3, 63897 Miltenberg/Main",
+    "issuing_company_phone": "+49 9371 9786-0",
+    "issuing_company_website": "www.cpb-software.com",
+    "issuing_company_email": "germany@cpb-software.com",
+    "invoice_number": "123100401",
+    "issue_date": "1. März 2024",
+    "due_date": "",
+    "reference_number": "",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "item_name": "Basic Fee wmView",
+        "description": "",
+        "quantity": 1,
+        "unit_price": 130.0,
+        "amount": 130.0
+      },
+      {
+        "item_name": "Transaction Fee T1",
+        "description": "",
+        "quantity": 14,
+        "unit_price": 0.58,
+        "amount": 8.12
+      },
+      {
+        "item_name": "Transaction Fee T3",
+        "description": "",
+        "quantity": 162,
+        "unit_price": 1.5,
+        "amount": 243.0
+      }
+    ],
+    "gst_information": {
+      "gst_description": "VAT 19%",
+      "amount": 72.41
+    },
+    "total_amount_due": 453.53,
+    "_metadata": {
+      "file_path": "sample_invoice_pdf.pdf",
+      "file_type": "pdf",
+      "model_used": "gpt-4o",
+      "completion_tokens": 214,
+      "prompt_tokens": 3963,
+      "total_tokens": 4177
+    }
+  }
+}

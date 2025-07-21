@@ -1,0 +1,41 @@
+{
+  "issuing_company_name": "Your Business Name",
+  "issuing_company_address": "5 Martin Pl\nSydney NSW 2000\nAustralia",
+  "issuing_company_phone": "+61200000000",
+  "issuing_company_website": "www.yourbusinessname.com.au",
+  "issuing_company_email": "email@yourbusinessname.com.au",
+  "invoice_number": "2022435",
+  "issue_date": "19/7/2022",
+  "due_date": "3/8/2022",
+  "reference_number": "2022435",
+  "currency": "AUD",
+  "line_items": [
+    {
+      "item_name": "Services & products",
+      "description": "Services & products",
+      "quantity": 1,
+      "unit_price": 100.0,
+      "amount": 100.0
+    },
+    {
+      "item_name": "More services & products",
+      "description": "More services & products",
+      "quantity": 1,
+      "unit_price": 2000.0,
+      "amount": 2000.0
+    }
+  ],
+  "gst_information": {
+    "gst_description": "GST 10% from $100.00, GST 20% from $2,000.00",
+    "amount": 410.0
+  },
+  "total_amount_due": 2510.0,
+  "_metadata": {
+    "file_path": "sample_invoice_1.png",
+    "file_type": "image",
+    "model_used": "gpt-4o",
+    "completion_tokens": 214,
+    "prompt_tokens": 1607,
+    "total_tokens": 1821
+  }
+}
