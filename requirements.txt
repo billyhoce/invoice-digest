@@ -1,4 +1,2 @@
-fastapi[standard]
-langchain
-langchain-openai
-docling
+openai
+dotenv

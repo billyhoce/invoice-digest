@@ -1,0 +1,2 @@
+OPENAI_MODEL = "gpt-4o"
+MAX_WORKERS = 5

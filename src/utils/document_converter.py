@@ -1,0 +1,1 @@
+#TODO To add utils to support document conversion from docx to images for OpenAI processing
