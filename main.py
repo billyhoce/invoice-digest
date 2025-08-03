@@ -54,7 +54,7 @@ def process_directory(input_dir: str = "INPUT_DOCUMENTS_HERE", output_dir: str =
     result = processor.extract_from_multiple_files(file_paths=files_to_process, max_workers=MAX_WORKERS)
     for file_path, data in result.items():
         file_path = Path(file_path)
-        output_file = output_path / f"{file_path.stem}_extracted.json"
+        output_file = output_path / f"{file_path.stem}_extracted_2.json"
         processor.save_results(data, output_file)
         print(f"Saved extraction result for {file_path.name} to {output_file.name}")
 
