@@ -5,7 +5,8 @@ from typing import Union, Dict, Any, Optional
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import OpenAI
-from src.constants import MULTIMODAL_EXTRACTION_TEMPLATE, EXTRACTION_SCHEMA
+from src.constants import MULTIMODAL_EXTRACTION_TEMPLATE
+from config import EXTRACTION_SCHEMA
 
 class MultimodalInvoiceProcessor:
     """

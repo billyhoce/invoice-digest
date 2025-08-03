@@ -1,0 +1,58 @@
+{
+  "issuing_company_name": "C2O CORPORATION PTE LTD",
+  "issuing_company_address": "No. 22 Sin Ming Lane Midview City #02-80 Singapore 573969",
+  "issuing_company_phone": "(65) 6256 2703",
+  "issuing_company_website": "http://www.c2o.com.sg",
+  "issuing_company_email": "",
+  "receiving_company_name": "ARCOPS PTE LTD",
+  "receiving_company_address": "80 GENTING LANE #09-10 GENTING BLOCK Singapore 349565",
+  "receiving_company_phone": "7000 0272767/9382 2933",
+  "receiving_company_website": "",
+  "receiving_company_email": "",
+  "invoice_number": "IN552801",
+  "issue_date": "2024-02-19",
+  "due_date": "",
+  "reference_number": "S/O. SO24-002522",
+  "delivery_order_number": "DO24-00222",
+  "currency": "SGD",
+  "line_items": [
+    {
+      "item_name": "EPSON TM-T88VI-161 PRINTER (BK/U+S+E)",
+      "item_code": "C31CE94161",
+      "description": "S/N: X6XG019039",
+      "quantity": 1,
+      "unit_price": 456.0,
+      "amount": 456.0
+    },
+    {
+      "item_name": "EPSON 7113378 VOLEX 3-PIN POWER CORD",
+      "item_code": "PPAEP07113378",
+      "description": "",
+      "quantity": 1,
+      "unit_price": 0.0,
+      "amount": 0.0
+    },
+    {
+      "item_name": "USB CABLE",
+      "item_code": "PPAOMUSBCABLE",
+      "description": "",
+      "quantity": 1,
+      "unit_price": 0.0,
+      "amount": 0.0
+    }
+  ],
+  "gst_information": {
+    "gst_description": "GST 9%",
+    "amount": 41.04
+  },
+  "total_amount_due": 497.04,
+  "other_notes": "",
+  "_metadata": {
+    "file_path": "INPUT_DOCUMENTS_HERE\\C2O_Corporation.jpg",
+    "file_type": "image",
+    "model_used": "gpt-4o",
+    "completion_tokens": 364,
+    "prompt_tokens": 1485,
+    "total_tokens": 1849
+  }
+}

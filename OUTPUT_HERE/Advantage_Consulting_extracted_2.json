@@ -1,0 +1,42 @@
+{
+  "issuing_company_name": "Advantage Consulting",
+  "issuing_company_address": "Block 726, #10-73 Yishun Street 71, Singapore 760726.",
+  "issuing_company_phone": "9852.5415",
+  "issuing_company_website": "",
+  "issuing_company_email": "",
+  "receiving_company_name": "ARCPOS PTE LTD",
+  "receiving_company_address": "80 Genting Lane, #09-10, Genting Block, Ruby Industrial Complex, Singapore 349565",
+  "receiving_company_phone": "7000 0272767",
+  "receiving_company_website": "",
+  "receiving_company_email": "",
+  "invoice_number": "INV20240010001",
+  "issue_date": "2024-12-01",
+  "due_date": "",
+  "reference_number": "",
+  "delivery_order_number": "",
+  "currency": "SGD",
+  "line_items": [
+    {
+      "item_name": "Professional Services",
+      "item_code": "",
+      "description": "IT Services (1 Oct 2023 – 31 Dec 2024)",
+      "quantity": 1,
+      "unit_price": 12175.0,
+      "amount": 12175.0
+    }
+  ],
+  "gst_information": {
+    "gst_description": "",
+    "amount": 0
+  },
+  "total_amount_due": 12175.0,
+  "other_notes": "A financing charge of 2% per month will be imposed on overdue amount.",
+  "_metadata": {
+    "file_path": "INPUT_DOCUMENTS_HERE\\Advantage_Consulting.pdf",
+    "file_type": "pdf",
+    "model_used": "gpt-4o",
+    "completion_tokens": 245,
+    "prompt_tokens": 1219,
+    "total_tokens": 1464
+  }
+}
