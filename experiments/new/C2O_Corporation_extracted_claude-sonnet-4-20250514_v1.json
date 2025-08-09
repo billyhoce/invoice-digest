@@ -1,0 +1,58 @@
+{
+  "invoice_number": "IN552801",
+  "issue_date": "2024-02-19",
+  "due_date": "<UNKNOWN>",
+  "currency": "SGD",
+  "total_amount_due": 497.04,
+  "issuing_company_name": "C2O CORPORATION PTE LTD",
+  "issuing_company_address": "22 Sin Ming Lane, Midview City #02-80, Singapore 573969",
+  "issuing_company_phone": "(65) 6256 2733",
+  "issuing_company_website": "www.c2ocorp.com",
+  "issuing_company_email": "<UNKNOWN>",
+  "receiving_company_name": "ARCPOS PTE LTD",
+  "receiving_company_address": "80 GENTING LANE, #09-10 GENTING BLOCK, Singapore 349565",
+  "receiving_company_phone": "7000 0272/67/9382 2933",
+  "receiving_company_email": "<UNKNOWN>",
+  "receiving_company_website": "<UNKNOWN>",
+  "delivery_order_number": "DO24-03022",
+  "reference_number": "SO24-03265",
+  "line_items": [
+    {
+      "item_code": "C31CE94161",
+      "item_name": "EPSON TM-T88VI-161 PRINTER (BK/U+S+E) C31CE94161 S/NO X6XC019039",
+      "description": "EPSON TM-T88VI-161 PRINTER (BK/U+S+E) C31CE94161 S/NO X6XC019039",
+      "quantity": 1,
+      "unit_price": 456.0,
+      "amount": 456.0
+    },
+    {
+      "item_code": "PPAEP07113378",
+      "item_name": "EPSON 7113378 VOLEX 3-PIN POWER CORD",
+      "description": "EPSON 7113378 VOLEX 3-PIN POWER CORD",
+      "quantity": 1,
+      "unit_price": 0.0,
+      "amount": 0.0
+    },
+    {
+      "item_code": "PPAOMUSBCABLE",
+      "item_name": "USB CABLE",
+      "description": "USB CABLE",
+      "quantity": 1,
+      "unit_price": 0.0,
+      "amount": 0.0
+    }
+  ],
+  "gst_information": {
+    "gst_description": "GST 9%",
+    "amount": 41.04
+  },
+  "other_notes": "PayNow ID: 198400208H (Please quote Tax Invoice No.)",
+  "_metadata": {
+    "file_path": "INPUT_DOCUMENTS_HERE\\C2O_Corporation.jpg",
+    "file_type": "image",
+    "model_used": "claude-sonnet-4-20250514",
+    "total_tokens": 3744,
+    "input_tokens": 2851,
+    "output_tokens": 893
+  }
+}

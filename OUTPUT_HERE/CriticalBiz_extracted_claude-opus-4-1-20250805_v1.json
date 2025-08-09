@@ -1,0 +1,49 @@
+{
+  "invoice_number": "23161916",
+  "issue_date": "2023-12-12",
+  "issuing_company_name": "CriticalBiz (Far East) Pte. Ltd.",
+  "issuing_company_address": "4012 Ang Mo Kio Ave 10, #06-11 TechPlace 1, Singapore 569628",
+  "issuing_company_phone": "+65 6259 3220 / +65 9838 9758",
+  "receiving_company_name": "ARCPOS PTE LTD",
+  "receiving_company_address": "35 GENTING LANE #02-07 RUBY INDUSTRIAL COMPLEX, GENTING BLOCK",
+  "receiving_company_phone": "+6593822933",
+  "receiving_company_email": "peter.ho@arcpos.com",
+  "currency": "SGD",
+  "line_items": [
+    {
+      "item_name": "TOSHIBA B-EX4T1-TS12-QM-R",
+      "description": "4\" TT/DT NEAR EDGE PRINTER, 305DPI, USB & ETHERNET INTERFACE, UK 3-PIN POWER CORD, USB CABLE, PRINTER DELIVERY, INSTALLATION, TRAINING & TESTING, & COMMISSIONING, CARRY-IN MANUFACTURER'S WARRANTY P/N 18221168733 S/N 2323K220935",
+      "quantity": 1,
+      "unit_price": 2350.0,
+      "amount": 2350.0
+    },
+    {
+      "item_name": "PROFESSIONAL SERVICE-ON-SITE",
+      "description": "1 YEAR ON-SITE HARDWARE WARRANTY SUPPORT EXCLUDING HUMAN INDUCED DAMAGES & PRINT-HEAD SCRATCHES",
+      "quantity": 1,
+      "unit_price": 480.0,
+      "amount": 480.0
+    },
+    {
+      "item_name": "TOSHIBA 110mmX600M AG6E WAX RESIN RIBBON FOR EX4T1 & EX6T1 PRINTER",
+      "description": "STANDBY REPLACEMENT LOAN PRINTER WHILE UNDER WARRANTY REPAIR (EXPIRE ON 13/12/2024) P/N BX780110AG6E NOTE: PROVIDED AT NO COST FOR PRINTER TESTING PURPOSE ONLY WHILE STOCKS LAST",
+      "quantity": 1,
+      "unit_price": 0,
+      "amount": 0
+    }
+  ],
+  "gst_information": {
+    "gst_description": "GST 8%",
+    "amount": 226.4
+  },
+  "total_amount_due": 3056.4,
+  "other_notes": "Cheque should be crossed and made payable to \\\"CriticalBiz (Far East) Pte Ltd\\\". CriticalBiz reserves the right to charge a 5% interest charge per month on late invoices until paid. For electronic transfer, please remit to: Bank A/C No: 695-711655-001, Bank Name: OCBC Bank, Bank Code: 7339, Branch Code: 695. ATTENTION: MS. FELINA LIM OR MS. MAGDELINE LIM (+6565452828)",
+  "_metadata": {
+    "file_path": "INPUT_DOCUMENTS_HERE\\CriticalBiz.jpg",
+    "file_type": "image",
+    "model_used": "claude-opus-4-1-20250805",
+    "total_tokens": 3791,
+    "input_tokens": 2848,
+    "output_tokens": 943
+  }
+}

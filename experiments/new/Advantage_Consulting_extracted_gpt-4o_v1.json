@@ -1,11 +1,11 @@
 {
   "issuing_company_name": "Advantage Consulting",
-  "issuing_company_address": "Block 726, #10-73 Yishun Street 71, Singapore 760726.",
+  "issuing_company_address": "Block 726, #10-73 Yishun Street 71, Singapore 760726",
   "issuing_company_phone": "9852.5415",
   "issuing_company_website": "",
   "issuing_company_email": "",
   "receiving_company_name": "ARCPOS PTE LTD",
-  "receiving_company_address": "80 Genting Lane, #09-10, Genting Block Ruby Industrial Complex, Singapore 349565",
+  "receiving_company_address": "80 Genting Lane, #09-10, Genting Block, Ruby Industrial Complex, Singapore 349565",
   "receiving_company_phone": "7000 0272767",
   "receiving_company_website": "",
   "receiving_company_email": "",
@@ -35,8 +35,8 @@
     "file_path": "INPUT_DOCUMENTS_HERE\\Advantage_Consulting.pdf",
     "file_type": "pdf",
     "model_used": "gpt-4o",
-    "completion_tokens": 244,
-    "prompt_tokens": 1221,
-    "total_tokens": 1465
+    "total_tokens": 1454,
+    "input_tokens": 1209,
+    "output_tokens": 245
   }
 }

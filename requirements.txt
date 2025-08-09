@@ -1,2 +1,4 @@
-openai
 dotenv
+langchain
+langchain-openai
+langchain-anthropic

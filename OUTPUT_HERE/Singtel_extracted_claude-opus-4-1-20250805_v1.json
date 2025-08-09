@@ -1,0 +1,32 @@
+{
+  "invoice_number": "0111",
+  "issue_date": "2025-07-17",
+  "total_amount_due": -238.8,
+  "currency": "SGD",
+  "issuing_company_name": "Singapore Telecommunications Limited",
+  "issuing_company_address": "Singapore Post Centre, 10 Eunos Road 8 #07-31 Singapore 408600",
+  "receiving_company_name": "ARCPOS PTE. LTD.",
+  "receiving_company_address": "APT/BLK 726 YISHUN STREET 71, #10-73, SINGAPORE 760726",
+  "gst_information": {
+    "gst_description": "GST @ 9%",
+    "amount": 0.9
+  },
+  "line_items": [
+    {
+      "item_name": "One Number Service",
+      "description": "Subscription Charge 12 Jul 2025 to 11 Aug 2025",
+      "quantity": 1,
+      "unit_price": 10.0,
+      "amount": 10.0
+    }
+  ],
+  "other_notes": "Balance in Your Favour (payment is not required). Payment after 11 Jul 2025 is not shown on this bill",
+  "_metadata": {
+    "file_path": "INPUT_DOCUMENTS_HERE\\Singtel.pdf",
+    "file_type": "pdf",
+    "model_used": "claude-opus-4-1-20250805",
+    "total_tokens": 6252,
+    "input_tokens": 5817,
+    "output_tokens": 435
+  }
+}

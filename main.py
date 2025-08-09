@@ -1,10 +1,8 @@
-import sys
 import argparse
-import os
 from dotenv import load_dotenv
 from pathlib import Path
 from src.digester import MultimodalInvoiceProcessor
-from config import OPENAI_MODEL, MAX_WORKERS
+from config import MODEL, MODEL_PROVIDER, MAX_WORKERS
 
 def process_directory(input_dir: str = "INPUT_DOCUMENTS_HERE", output_dir: str = "OUTPUT_HERE"):
     """
@@ -27,7 +25,7 @@ def process_directory(input_dir: str = "INPUT_DOCUMENTS_HERE", output_dir: str =
     
     # Initialize the processor
     try:
-        processor = MultimodalInvoiceProcessor(model=OPENAI_MODEL)
+        processor = MultimodalInvoiceProcessor(model=MODEL, model_provider=MODEL_PROVIDER)
         print(f"Initialized MultimodalInvoiceProcessor with model: {processor.model}")
     except Exception as e:
         print(f"Error initializing processor: {e}")
@@ -54,7 +52,7 @@ def process_directory(input_dir: str = "INPUT_DOCUMENTS_HERE", output_dir: str =
     result = processor.extract_from_multiple_files(file_paths=files_to_process, max_workers=MAX_WORKERS)
     for file_path, data in result.items():
         file_path = Path(file_path)
-        output_file = output_path / f"{file_path.stem}_extracted.json"
+        output_file = output_path / f"{file_path.stem}_extracted_{MODEL}_v1.json"
         processor.save_results(data, output_file)
         print(f"Saved extraction result for {file_path.name} to {output_file.name}")
 

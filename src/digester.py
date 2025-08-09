@@ -1,39 +1,29 @@
 import base64
-import os
 from pathlib import Path
-from typing import Union, Dict, Any, Optional
+from typing import Union, Dict, Any
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from openai import OpenAI
 from src.constants import MULTIMODAL_EXTRACTION_TEMPLATE
 from config import EXTRACTION_SCHEMA
+from langchain.chat_models import init_chat_model
 
 class MultimodalInvoiceProcessor:
     """
     A comprehensive processor for extracting invoice data from images and PDF files
     using OpenAI's multimodal capabilities.
     """
-    
-    def __init__(self, api_key: Optional[str] = None, model: str = "gpt-4o"):
+
+    def __init__(self, model: str = "gpt-4o", model_provider: str = None):
         """
-        Initialize the processor with OpenAI client.
+        Initialize the processor with provided model
         
         Args:
             api_key: OpenAI API key (if None, uses environment variable OPENAI_API_KEY)
             model: OpenAI model to use for extraction
         """
-        # Use provided API key or fall back to environment variable
-        if api_key is None:
-            api_key = os.getenv('OPENAI_API_KEY')
-            
-        if api_key is None:
-            raise ValueError(
-                "OpenAI API key must be provided either as parameter or "
-                "through OPENAI_API_KEY environment variable"
-            )
-
-        self.client = OpenAI(api_key=api_key)
         self.model = model
+        self.llm = init_chat_model(model=model, model_provider=model_provider)
+        self.llm_structured_output = self.llm.with_structured_output(EXTRACTION_SCHEMA, include_raw=True)
         self.supported_image_formats = {'.png', '.jpg', '.jpeg', '.gif', '.webp'}
         self.supported_pdf_formats = {'.pdf'}
     
@@ -63,34 +53,29 @@ class MultimodalInvoiceProcessor:
             '.webp': 'image/webp',
             '.pdf': 'application/pdf'
         }
-        return mime_types.get(extension, 'application/octet-stream')
+        return mime_types.get(extension)
     
-    def _create_content_for_image(self, file_path: Union[str, Path], base64_data: str) -> list:
+    def _create_content_for_image(self, file_path: Union[str, Path], base64_data: str) -> Dict[str, Any]:
         """Create content structure for image files."""
         mime_type = self._get_mime_type(file_path)
-        return [
-            {"type": "text", "text": MULTIMODAL_EXTRACTION_TEMPLATE},
-            {
-                "type": "image_url",
-                "image_url": {
-                    "url": f"data:{mime_type};base64,{base64_data}"
-                }
-            }
-        ]
-    
-    def _create_content_for_pdf(self, file_path: Union[str, Path], base64_data: str) -> list:
+        return {
+            "type": "image",
+            "source_type": "base64",
+            "data": base64_data,
+            "mime_type": mime_type,
+        }
+
+    def _create_content_for_pdf(self, file_path: Union[str, Path], base64_data: str) -> Dict[str, Any]:
         """Create content structure for PDF files."""
-        filename = Path(file_path).name
-        return [
-            {"type": "text", "text": MULTIMODAL_EXTRACTION_TEMPLATE},
-            {
-                "type": "file",
-                "file": {
-                    "filename": filename,
-                    "file_data": f"data:application/pdf;base64,{base64_data}"
-                }
-            }
-        ]
+        mime_type = self._get_mime_type(file_path)
+        file_name = Path(file_path).name
+        return {
+            "type": "file",
+            "source_type": "base64",
+            "mime_type": mime_type,
+            "data": base64_data,
+            "filename": file_name
+        }
     
     def extract_invoice_data(self, file_path: Union[str, Path]) -> Dict[str, Any]:
         """
@@ -116,40 +101,36 @@ class MultimodalInvoiceProcessor:
         base64_data = self._encode_file_to_base64(file_path)
         
         if file_type == 'image':
-            content = self._create_content_for_image(file_path, base64_data)
+            invoice_content = self._create_content_for_image(file_path, base64_data)
         elif file_type == 'pdf':
-            content = self._create_content_for_pdf(file_path, base64_data)
+            invoice_content = self._create_content_for_pdf(file_path, base64_data)
         else:
             raise ValueError(f"Unsupported file type: {file_type}")
         
         # Make API call
         try:
-            completion = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{
-                    "role": "user",
-                    "content": content
-                }],
-                response_format={
-                    "type": "json_schema",
-                    "json_schema": {
-                        "name": "invoice_extraction_schema",
-                        "schema": EXTRACTION_SCHEMA
-                    }
-                }
-            )
+            message = {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": MULTIMODAL_EXTRACTION_TEMPLATE,
+                    },
+                    invoice_content
+                ],
+            }
+            response = self.llm_structured_output.invoke([message])
             
             # Parse and return result
-            result = json.loads(completion.choices[0].message.content)
+            result = response['parsed']
             result['_metadata'] = {
                 'file_path': str(file_path),
                 'file_type': file_type,
                 'model_used': self.model,
-                'completion_tokens': completion.usage.completion_tokens,
-                'prompt_tokens': completion.usage.prompt_tokens,
-                'total_tokens': completion.usage.total_tokens
+                'total_tokens': response['raw'].usage_metadata['total_tokens'],
+                'input_tokens': response['raw'].usage_metadata['input_tokens'],
+                'output_tokens': response['raw'].usage_metadata['output_tokens']
             }
-            
             return result
             
         except Exception as e:

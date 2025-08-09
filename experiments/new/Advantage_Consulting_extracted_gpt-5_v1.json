@@ -1,7 +1,7 @@
 {
   "issuing_company_name": "Advantage Consulting",
-  "issuing_company_address": "Block 726, #10-73 Yishun Street 71, Singapore 760726.",
-  "issuing_company_phone": "9852.5415",
+  "issuing_company_address": "Block 726, #10-73 Yishun Street 71, Singapore 760726",
+  "issuing_company_phone": "9852 5415",
   "issuing_company_website": "",
   "issuing_company_email": "",
   "receiving_company_name": "ARCPOS PTE LTD",
@@ -21,22 +21,19 @@
       "item_code": "",
       "description": "IT Services (1 Oct 2023 – 31 Dec 2024)",
       "quantity": 1,
-      "unit_price": 12175.0,
-      "amount": 12175.0
+      "unit_price": 12175,
+      "amount": 12175
     }
   ],
-  "gst_information": {
-    "gst_description": "",
-    "amount": 0
-  },
-  "total_amount_due": 12175.0,
-  "other_notes": "A financing charge of 2% per month will be imposed on overdue amount.",
+  "gst_information": {},
+  "total_amount_due": 12175,
+  "other_notes": "Payment Terms: Cash. Attention to: Peter Ho. Kindly enclose the payment slip along with your cheque and do not staple your cheque to the payment slip. Crossed cheques should be made payable to Advantage Consulting. Note: A financing charge of 2% per month will be imposed on overdue amount.",
   "_metadata": {
     "file_path": "INPUT_DOCUMENTS_HERE\\Advantage_Consulting.pdf",
     "file_type": "pdf",
-    "model_used": "gpt-4o",
-    "completion_tokens": 245,
-    "prompt_tokens": 1219,
-    "total_tokens": 1464
+    "model_used": "gpt-5",
+    "total_tokens": 6810,
+    "input_tokens": 1205,
+    "output_tokens": 5605
   }
 }
